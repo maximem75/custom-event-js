@@ -1,4 +1,4 @@
-import {on, fire, clear, clearId, showEvents, setMutationConfig} from '../src/index';
+import { on, fire, clear, clearId, showEvents, setMutationConfig } from '../src/index';
 
 window.onload = () => {
   setMutationConfig(true);
@@ -21,7 +21,7 @@ window.onload = () => {
   document.body.appendChild(div);
 
   let divDyn = null;
-  for (let i = 0; i < 1000; i+=1) {
+  for (let i = 0; i < 10; i += 1) {
     divDyn = document.createElement('div');
     divDyn.setAttribute('id', i);
     divDyn.setAttribute('style', 'display:inline-block; width: 25px; height: 25px; background-color:black;');
@@ -44,14 +44,13 @@ window.onload = () => {
 
 
   /*while (div.childElementCount > 0) {
-    div.removeChild(div.childNodes[0]);
-  }*/
+   div.removeChild(div.childNodes[0]);
+   }*/
 
   //document.body.removeChild(div);
   clear(div, 'click');
+  clear(object, 'show.message');
   console.log(object);
- //clear(object, 'show.message');
- //console.log(object);
 };
 
 function showMessage(value) {
