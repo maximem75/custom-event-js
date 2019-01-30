@@ -82,9 +82,8 @@ export function clear(item, event) {
     throw new Error('Bad event');
 
   if (item instanceof Element) {
-    let index = 0;
     const length = config.handlers.length;
-    for (let i = 0; i < length; i += 1) {
+    for (let index = 0, i = 0; i < length; i += 1) {
       const handler = config.handlers[index];
       if (handler.item === item && handler.event === event) {
         removeEvent(handler, index);
