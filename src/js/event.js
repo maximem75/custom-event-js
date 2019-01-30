@@ -40,7 +40,7 @@ export function on(item, event, callback, useCapture = false) {
     if (!item.handlers[event])
       item.handlers[event] = [];
 
-    item.handlers[event].push({id: getNewEventId(), item, callback, useCapture });
+    item.handlers[event].push({id: getNewEventId(), callback });
   }
 
   return config.id;
