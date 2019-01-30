@@ -1,7 +1,11 @@
 {
   "name": "custom-event-js",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maximem75/custom-event-js.git"
+  },
   "scripts": {
     "build": "rollup --config",
     "watch": "rollup -c -w"
@@ -22,7 +26,8 @@
     "rollup-plugin-javascript-obfuscator": "^1.0.1",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-uglify": "^4.0.0",
-    "rollup-plugin-css-only": "^0.4.0"
+    "rollup-plugin-css-only": "^0.4.0",
+    "dom-js": "git+https://github.com/maximem75/dom-js.git"
   },
   "dependencies": {}
 }
